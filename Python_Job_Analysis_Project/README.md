@@ -58,8 +58,6 @@ Each Jupyter notebook for this project aimed at investigating specific aspects o
 
 To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
 
-View my notebook with detailed steps here: [2_Skill_Demand](Python_Job_Analysis_Project\2_Skill_Demand.ipynb)
-
 ### Visualize Data
 ```python
 fig,ax=plt.subplots(len(job_titles),1)
@@ -88,7 +86,7 @@ plt.show()
 ```
 ### Results
 
-![Image](Python_Job_Analysis_Project\Pictures\2_Skill_demand.png)
+![Image](Pictures\2_Skill_demand.png)
 
 ### Insights:
 - 🌍 SQL and Python are universal: They are the top two most required skills across all three data roles.
@@ -113,7 +111,8 @@ for i in range(5):
     plt.text(11.1,df_plot.iloc[-1,i], df_plot.columns[i], color=sns.color_palette('tab10')[i], va='center')
 ```
 
-![](Python_Job_Analysis_Project\Pictures\3_Skills_demand_line_chart.png)
+### Result
+![Image](Pictures\3_Skills_demand_line_chart.png)
 
 ## Insights:
 
@@ -134,7 +133,9 @@ plt.ylabel('')
 plt.xlim(0,300000)
 plt.show()
 ```
-![](Python_Job_Analysis_Project\Pictures\4_Salary_Analysis_Box_plot.png)
+
+### Result
+![Image](Pictures\4_Salary_Analysis_Box_plot.png)
 
 ## Insights:
 - 🤖 Machine Learning Engineers (Widest Variance): This role has the largest pay spread. The middle 50% earn between ~$80k and $165k, but total pay stretches from $35k to nearly $270k—offering massive earning potential but huge variability based on the specific job. 💸
@@ -171,7 +172,9 @@ plt.tight_layout()
 plt.show()
 ```
 
-![](Python_Job_Analysis_Project\Pictures\5_Optimal_Skills.png)
+### Result
+
+![Image](Pictures\5_Optimal_Skills.png)
 
 ## Insights:
 - 📊 Foundational Skills are High Demand, Average Pay: SQL, Excel, and Python are the absolute core of the data analyst toolkit, appearing in roughly 38% to 50% of all job postings. However, because these are baseline requirements, their median salaries sit right in the middle of the pack at around $95K to $98K.
