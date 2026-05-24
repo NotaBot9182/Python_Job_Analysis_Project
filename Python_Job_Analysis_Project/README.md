@@ -1,8 +1,8 @@
 # Overview
 
-Welcome to my analysis of the data job market, focusing on data analyst roles. This project was created out of a desire to navigate and understand the job market more effectively. It delves into the top-paying and in-demand skills to help find optimal job opportunities for data analysts.
+Welcome to my analysis of the data job market, focusing on data analyst roles. This project was created out of a desire to navigate and understand the job market more effectively. It delves into the trends, demands, and salaries of the data job market to help you navigate your career path effectively.
 
-The data sourced from [Luke Barousse's Python Course](https://lukebarousse.com/python) which provides a foundation for my analysis, containing detailed information on job titles, salaries, locations, and essential skills. Through a series of Python scripts, I explore key questions such as the most demanded skills, salary trends, and the intersection of demand and salary in data analytics.
+The data sourced from [Luke Barousse's Python Course](https://lukebarousse.com/python) which provides a foundation for my analysis, containing detailed information on job titles, salaries, locations, and required skills.
 
 # The Questions
 
@@ -52,11 +52,11 @@ df['job_skills'] = df['job_skills'].apply(lambda x: ast.literal_eval(x) if pd.no
 
 # The Analysis
 
-Each Jupyter notebook for this project aimed at investigating specific aspects of the data job market. Here’s how I approached each question:
+Each Jupyter notebook for this project aimed at investigating specific aspects of the data job market. Here's how I approached each question:
 
 ## 1.What are the most demanded skills for the top 3 most popular data roles?
 
-To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query highlights the most popular job titles and their top skills, showing which skills I should pay attention to depending on the role I'm targeting.
+To find the most demanded skills for the top 3 most popular data roles. I filtered out those positions by which ones were the most popular, and got the top 5 skills for these top 3 roles. This query helped me understand the specific skill requirements for each role.
 
 ### Visualize Data
 ```python
@@ -86,7 +86,7 @@ plt.show()
 ```
 ### Results
 
-![Image](Pictures\2_Skill_demand.png)
+![Image](Pictures/2_Skill_demand.png)
 
 ### Insights:
 - 🌍 SQL and Python are universal: They are the top two most required skills across all three data roles.
@@ -112,13 +112,13 @@ for i in range(5):
 ```
 
 ### Result
-![Image](Pictures\3_Skills_demand_line_chart.png)
+![Image](Pictures/3_Skills_demand_line_chart.png)
 
 ## Insights:
 
-- 👑 SQL is the Undisputed Leader: Throughout the entire year, SQL consistently remained the most highly demanded skill, appearing in over 50% of job postings every month and peaking at nearly 70% in May.
-- 📈 The "May Spike" Anomaly: There was a very noticeable, simultaneous spike in demand for both SQL and Excel specifically in May. Excel nearly reached 60% before dropping sharply back to its baseline in June.
-- 🚀 Late-Year Surge for Power BI: While Power BI remained the lowest-demanded skill among the top 5 for the vast majority of the year, it experienced a sharp, steep increase in demand between November and December, closing the gap with Tableau.
+- 👑 SQL is the Undisputed Leader: Throughout the entire year, SQL consistently remained the most highly demanded skill, appearing in over 50% of job postings every month and peaking at nearly 70% in certain months.
+- 📈 The "May Spike" Anomaly: There was a very noticeable, simultaneous spike in demand for both SQL and Excel specifically in May. Excel nearly reached 60% before dropping sharply back to its baseline around 30%.
+- 🚀 Late-Year Surge for Power BI: While Power BI remained the lowest-demanded skill among the top 5 for the vast majority of the year, it experienced a sharp, steep increase in demand between November and December.
 
 ## 3.How well do jobs and skills pay for Data Analysts?
 
@@ -135,12 +135,12 @@ plt.show()
 ```
 
 ### Result
-![Image](Pictures\4_Salary_Analysis_Box_plot.png)
+![Image](Pictures/4_Salary_Analysis_Box_plot.png)
 
 ## Insights:
-- 🤖 Machine Learning Engineers (Widest Variance): This role has the largest pay spread. The middle 50% earn between ~$80k and $165k, but total pay stretches from $35k to nearly $270k—offering massive earning potential but huge variability based on the specific job. 💸
-- 💻 Software Engineers (Tight Core Pay + Outliers): Most salaries are tightly clustered in a narrow band between $65k and $80k. However, a select few distinct outliers earn significantly more, hitting up to $200k. 🚀
-- 📊 Senior Data Engineers (Highly Concentrated): Unlike the other roles, this dataset collapses into a single line at ~$150k. This means core salaries are heavily concentrated at that exact number, flanked by scattered outliers both higher and lower. 🎯
+- 🤖 Machine Learning Engineers (Widest Variance): This role has the largest pay spread. The middle 50% earn between ~$80k and $165k, but total pay stretches from $35k to nearly $270k—offering massive potential upside.
+- 💻 Software Engineers (Tight Core Pay + Outliers): Most salaries are tightly clustered in a narrow band between $65k and $80k. However, a select few distinct outliers earn significantly more, hitting the $170k+ range.
+- 📊 Senior Data Engineers (Highly Concentrated): Unlike the other roles, this dataset collapses into a single line at ~$150k. This means core salaries are heavily concentrated at that exact number, with very little variance across the dataset.
 
 ## 4.What is the most optimal skill to learn for Data Analysts?
 
@@ -174,9 +174,9 @@ plt.show()
 
 ### Result
 
-![Image](Pictures\5_Optimal_Skills.png)
+![Image](Pictures/5_Optimal_Skills.png)
 
 ## Insights:
-- 📊 Foundational Skills are High Demand, Average Pay: SQL, Excel, and Python are the absolute core of the data analyst toolkit, appearing in roughly 38% to 50% of all job postings. However, because these are baseline requirements, their median salaries sit right in the middle of the pack at around $95K to $98K.
-- 📈 BI Tools Offer a Solid Salary Bump: Visualization tools like Power BI and Tableau sit in a great "sweet spot." They are moderately requested (around 18% to 22% of jobs) but command noticeably higher median salaries (~$108K to $112K) compared to foundational programming and spreadsheet skills.
-- 🚀 Niche Tech Commands Premium Outlier Pay: MongoDB is the massive outlier on this chart. While it has very low demand (required in less than 10% of roles), it pays the absolute highest median salary at over $160K, proving that rare, specialized database management skills are highly lucrative.
+- 📊 Foundational Skills are High Demand, Average Pay: SQL, Excel, and Python are the absolute core of the data analyst toolkit, appearing in roughly 38% to 50% of all job postings. However, because they're so common, their salary premiums are modest.
+- 📈 BI Tools Offer a Solid Salary Bump: Visualization tools like Power BI and Tableau sit in a great "sweet spot." They are moderately requested (around 18% to 22% of jobs) but command noticeably higher median salaries than the foundational skills.
+- 🚀 Niche Tech Commands Premium Outlier Pay: MongoDB is the massive outlier on this chart. While it has very low demand (required in less than 10% of roles), it pays the absolute highest median salary among all skills analyzed.
